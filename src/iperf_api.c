@@ -399,6 +399,13 @@ iperf_set_test_json_output(struct iperf_test *ipt, int json_output)
     ipt->json_output = json_output;
 }
 
+void
+iperf_set_test_stop(struct iperf_test *ipt)
+{
+    ipt->duration = 1;
+    ipt->done = 1;
+}
+
 int
 iperf_has_zerocopy( void )
 {
